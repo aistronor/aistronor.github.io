@@ -43,6 +43,11 @@
     border-bottom: none;
 }
 
+/* When menu is open */
+.sidebar.open {
+    right: 0;
+}
+
 /* Hamburger Menu */
 .hamburger-menu {
     font-size: 30px;
