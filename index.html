@@ -1,304 +1,63 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="es">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AISTRONOR — Equity Research Intelligence & AI Agents</title>
-  <meta name="description" content="AISTRONOR builds AI agents, RAG pipelines and graph reasoning for investment research: market trackers, portfolio optimization and automated document summaries." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome - Ian del Rio</title>
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
 
-  <!-- OpenGraph / Social header (replace with your hosted header image) -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="AISTRONOR — Investment Intelligence">
-  <meta property="og:description" content="AI agents, RAG pipelines and graph reasoning for equity research.">
-  <meta property="og:image" content="images/hdmckh.jpg"> <!-- <- replace -->
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="675">
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Tailwind theme: extend gradient colors -->
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            cobalt: '#306BFF',
-            neonpurple: '#A259FF',
-            sunset: '#FF7A59',
-            teal: '#00D7FF'
-          },
-          fontFamily: {
-            display: ['"JetBrains Mono"', 'monospace'],
-            body: ['Inter', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* small utility for logo gradient text */
-    .gradient-text {
-      background: linear-gradient(90deg, #00D7FF 0%, #306BFF 40%, #A259FF 75%, #FF7A59 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    /* thin glow for neon accents */
-    .neon-glow {
-      box-shadow: 0 6px 24px rgba(48,107,255,0.10), 0 2px 8px rgba(162,89,255,0.06);
-    }
-
-    /* social header cropping helper */
-    .social-header {
-      width: 100%;
-      height: 320px;
-      object-fit: cover;
-      background: linear-gradient(180deg, rgba(3,7,13,0.35), rgba(3,7,13,0.75));
-    }
-
-    /* hero background subtle texture */
-    .hero-bg {
-      background: radial-gradient(1200px 600px at 10% 30%, rgba(48,107,255,0.06), transparent 8%),
-                  radial-gradient(900px 500px at 80% 70%, rgba(162,89,255,0.05), transparent 10%);
-    }
-  </style>
+  <link rel="stylesheet" href="styles/index_ham.css">
 </head>
-<body class="bg-[#070912] text-gray-200 antialiased">
 
-  <!-- Top navigation -->
-  <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
-    <div class="flex items-center bg-[#071124]/60 backdrop-blur-md border border-gray-800 rounded-full px-5 py-2 space-x-6 neon-glow">
-      <!-- logo small (replace with your logo file) -->
-      <img src="images/hdmckh.jpg" alt="AISTRONOR" class="w-10 h-10 rounded-sm" />
-      <a href="#home" class="font-display text-sm tracking-wide gradient-text">AISTRONOR</a>
-      <div class="hidden md:flex items-center space-x-4 text-sm text-gray-300">
-        <a href="#services" class="hover:text-white">Services</a>
-        <a href="#agents" class="hover:text-white">AI Agents</a>
-        <a href="#cases" class="hover:text-white">Case Studies</a>
-        <a href="#contact" class="hover:text-white">Contact</a>
+<body>
+
+  <!-- Menú de hamburguesa -->
+  <div class="hamburger-menu" onclick="toggleMenu()">
+    &#9776;
+  </div>
+
+  <!-- Menú lateral a la derecha -->
+  <div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+    <a href="index.html">About</a>
+    <a href="cv.html">CV</a>
+    <a href="publications.html">Publications</a>
+  </div>
+
+  <!-- Contenido principal -->
+  <div id="main-content">
+    <div class="welcome-container">
+      <header class="welcome-header">
+        <p>Hi! I'm <strong>Ian del Rio</strong>, geoscientist with 10+ years of experience in research, data analysis
+          and reporting</p>
+      </header>
+
+      <!-- Imagen de bienvenida -->
+      <div class="welcome-image">
+        <img src="images/profile-image.jpeg" alt="Ian del Rio">
       </div>
+
+      <!-- Texto de introducción -->
+      <section class="welcome-text">
+        <p>In this page you'll be able to know more about me, my professional career, and my interests.</p>
+        <p>Check the different sections containing my resume and a list of publications and projects.</p>
+        <p>Thanks for the visit!</p>
+      </section>
+
+      <!-- Enlace a cv -->
+      <section class="welcome-cta">
+        <a href="cv.html" class="cta-button">Check out my resumé!</a>
+      </section>
+
+
     </div>
-  </nav>
+  </div>
 
-  <!-- Social header preview (use this section to create a social header image) -->
-  <header id="social" class="mt-28 max-w-6xl mx-auto px-6">
-    <!-- Hero area with centered logo and tagline -->
-    <div class="rounded-2xl overflow-hidden neon-glow border border-gray-800">
-      <!-- Replace with the exported social header (1200x675) -->
-    <!--  <img src="images/1764499703188.jpg" alt="Aistronor social header" class="w-full social-header hidden sm:block" />
-    -->  <div class="p-8 sm:p-12 bg-[#06070A] flex items-center gap-8">
-     <!--   <img src="images/1764499461148.jpg" alt="Aistronor logo" class="w-20 h-20" />
-     -->   <div>
-          <h1 class="text-3xl md:text-4xl font-display font-bold gradient-text leading-tight">AISTRONOR</h1>
-          <p class="mt-2 text-gray-300 max-w-2xl">
-            AI agents, RAG pipelines and knowledge graphs for equity research — market trackers, portfolio optimization and automated document summarization.
-          </p>
-          <div class="mt-4 flex gap-3">
-            <a href="#contact" class="px-4 py-2 rounded-md bg-gradient-to-r from-cobalt to-neonpurple text-black font-semibold">Request Demo</a>
-            <a href="#cases" class="px-4 py-2 rounded-md border border-gray-700 text-gray-200">See Case Studies</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- MAIN -->
-  <main class="mt-12 max-w-7xl mx-auto px-6">
-
-    <!-- HERO -->
-    <section id="home" class="hero-bg rounded-2xl p-10 md:p-16 my-10 neon-glow border border-gray-800">
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <h2 class="text-4xl md:text-5xl font-display font-bold leading-tight gradient-text">
-            AI Agents & Research Systems for Investment Teams
-          </h2>
-          <p class="mt-4 text-gray-300 max-w-xl">
-            We design, develop and deploy autonomous research agents, Retrieval-Augmented-Generation (RAG) pipelines and graph-enhanced reasoning engines that convert raw filings, transcripts and market data into investment-grade insights.
-          </p>
-
-          <ul class="mt-6 space-y-3 text-gray-300">
-            <li>• Market trackers with multi-signal ingestion (fundamentals, alt-data, sentiment)</li>
-            <li>• Portfolio optimization: RL allocators, factor integration, stress-aware rebalancing</li>
-            <li>• Document automation: earnings-call & filings summarization, KPI extraction</li>
-            <li>• RAG + graphs: path-based reasoning, entity linking, provenance & auditable logs</li>
-          </ul>
-
-          <div class="mt-6 flex gap-3">
-            <a class="px-5 py-3 rounded-md bg-gradient-to-r from-cobalt to-neonpurple text-black font-semibold" href="#contact">Book a demo</a>
-            <a class="px-5 py-3 rounded-md border border-gray-700 text-gray-200" href="#agents">Learn about Agents</a>
-          </div>
-        </div>
-
-        <div class="bg-[#05060A] border border-gray-800 rounded-xl p-6">
-          <!-- Quick feature cards -->
-          <div class="grid gap-4">
-            <div class="p-4 rounded-lg border border-gray-800 bg-[#070814]">
-              <h4 class="font-semibold text-white">RAG for Research</h4>
-              <p class="text-gray-400 text-sm mt-1">Embeddings + retrieval + LLM synthesis with provenance & confidence scoring.</p>
-            </div>
-            <div class="p-4 rounded-lg border border-gray-800 bg-[#070814]">
-              <h4 class="font-semibold text-white">Graph Reasoning</h4>
-              <p class="text-gray-400 text-sm mt-1">Company/sector knowledge graphs enabling multi-hop queries and signal propagation.</p>
-            </div>
-            <div class="p-4 rounded-lg border border-gray-800 bg-[#070814]">
-              <h4 class="font-semibold text-white">Agent Orchestration</h4>
-              <p class="text-gray-400 text-sm mt-1">Orchestrate retrieval, analysis, summarization and alerting components into autonomous agents.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="my-12">
-      <h3 class="font-display text-2xl gradient-text mb-6">Services</h3>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        <article class="p-6 rounded-xl border border-gray-800 bg-[#070714]">
-          <h4 class="font-semibold mb-2">Market Trackers</h4>
-          <p class="text-gray-400 text-sm">Continuous ingestion pipelines for market data, fundamentals, news and alternative sources with scoring & regime detection.</p>
-        </article>
-
-        <article class="p-6 rounded-xl border border-gray-800 bg-[#070714]">
-          <h4 class="font-semibold mb-2">Portfolio Optimization</h4>
-          <p class="text-gray-400 text-sm">Factor models, RL-driven allocation, transaction-aware rebalancing and scenario optimization.</p>
-        </article>
-
-        <article class="p-6 rounded-xl border border-gray-800 bg-[#070714]">
-          <h4 class="font-semibold mb-2">Document Summaries</h4>
-          <p class="text-gray-400 text-sm">Domain-specific summarizers for earnings calls, 10-Ks, research notes and broker commentary — KPI extraction included.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- AI AGENTS -->
-    <section id="agents" class="my-12">
-      <h3 class="font-display text-2xl gradient-text mb-6">Agent design, development & deployment</h3>
-
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-xl border border-gray-800 bg-[#070714]">
-          <h4 class="font-semibold">Design</h4>
-          <p class="text-gray-400 text-sm">Specification of agent roles (retriever, analyst, summarizer, monitor), data sources, safety and SLAs.</p>
-          <ul class="text-gray-400 text-sm mt-3 space-y-1">
-            <li>• Data mapping & access control</li>
-            <li>• Retrieval & chunking strategy (embeddings, BM25 hybrids)</li>
-            <li>• Prompt / chain design & evaluation</li>
-          </ul>
-        </div>
-
-        <div class="p-6 rounded-xl border border-gray-800 bg-[#070714]">
-          <h4 class="font-semibold">Development & Deployment</h4>
-          <p class="text-gray-400 text-sm">MLOps pipelines, containerized deployments, monitoring & CI/CD for model updates and prompt/version control.</p>
-          <ul class="text-gray-400 text-sm mt-3 space-y-1">
-            <li>• Embeddings refresh schedules & vector DB maintenance</li>
-            <li>• RAG orchestration with caching & provenance</li>
-            <li>• Graph DB ingestion & indexing workflows</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- GRAPH-BASED REASONING -->
-    <section id="graphs" class="my-12">
-      <h3 class="font-display text-2xl gradient-text mb-6">Graph-enhanced reasoning</h3>
-      <div class="p-6 rounded-xl border border-gray-800 bg-[#070714]">
-        <p class="text-gray-400">Knowledge graphs model entities (companies, tickers, executives), relationships (supplier, owner, counterparty), and attributes (KPIs, filings, risk flags). Path-based retrieval allows queries like:</p>
-        <pre class="mt-4 bg-[#050610] p-4 rounded text-xs text-gray-300 overflow-auto">
-Query example:
-"Find direct suppliers of Company X with rising leverage in last 12 months and summarize related risk statements in most recent 10-K."
-
-Path-based reasoning:
-Company X -> Supplier (edge) -> Supplier's leverage (attribute/time-series) -> 10-K risk passage (source)
-        </pre>
-      </div>
-    </section>
-
-    <!-- CASE STUDIES -->
-    <section id="cases" class="my-12">
-      <h3 class="font-display text-2xl gradient-text mb-6">Case studies & outcomes</h3>
-
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-xl border border-gray-800 bg-[#070714]">
-          <h4 class="font-semibold">Equity Research Assistant (RAG + Graph)</h4>
-          <p class="text-gray-400 text-sm">Real-time KPI extraction and summarization reduced analyst time-to-insight by ~70% while preserving provenance and audit trails.</p>
-        </div>
-
-        <div class="p-6 rounded-xl border border-gray-800 bg-[#070714]">
-          <h4 class="font-semibold">Active Allocation Engine</h4>
-          <p class="text-gray-400 text-sm">RL-based allocator increased risk-adjusted returns (Sharpe +19%) in backtests across multi-regime periods.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="my-16">
-      <h3 class="font-display text-2xl gradient-text mb-6">Contact</h3>
-
-      <form class="grid gap-4 max-w-2xl" action="#" method="POST">
-        <input name="name" type="text" placeholder="Full name" class="p-3 rounded bg-[#060713] border border-gray-800" required>
-        <input name="email" type="email" placeholder="Email" class="p-3 rounded bg-[#060713] border border-gray-800" required>
-        <input name="company" type="text" placeholder="Company (optional)" class="p-3 rounded bg-[#060713] border border-gray-800">
-        <textarea name="message" rows="5" placeholder="How can we help?" class="p-3 rounded bg-[#060713] border border-gray-800" required></textarea>
-
-        <div class="flex gap-3">
-          <button type="submit" class="px-4 py-2 rounded bg-gradient-to-r from-cobalt to-neonpurple text-black font-semibold">Send request</button>
-          <button type="button" onclick="downloadBrandKit()" class="px-4 py-2 rounded border border-gray-700 text-gray-200">Download brand kit</button>
-        </div>
-      </form>
-    </section>
-
-    <!-- DISCLAIMER -->
-    <section class="my-8">
-      <div class="text-xs text-gray-500">
-        <strong>Disclaimer:</strong> AISTRONOR is a fictional company created solely for demonstration and educational purposes. Any resemblance to real organizations is coincidental. This website and its content are part of an illustrative exercise.
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="py-8 mt-8 border-t border-gray-800 text-center text-sm text-gray-500">
-    © 2025 AISTRONOR — Equity Research Intelligence & AI Agents
-  </footer>
-
-  <!-- Small helper scripts -->
-  <script>
-    // Theme toggle: swap 'dark' class (dark is default)
-    const html = document.documentElement;
-    const toggle = document.getElementById('themeToggle');
-
-    // initialize indicator (sun shows when light active)
-    function updateToggleIcon() {
-      toggle.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
-    }
-
-    updateToggleIcon();
-    toggle.addEventListener('click', () => {
-      html.classList.toggle('dark');
-      // optional: persist preference
-      localStorage.setItem('aistronor_theme', html.classList.contains('dark') ? 'dark' : 'light');
-      updateToggleIcon();
-    });
-
-    // Persist theme on load (if user previously toggled)
-    (function() {
-      const pref = localStorage.getItem('aistronor_theme');
-      if (pref === 'light') html.classList.remove('dark');
-      if (pref === 'dark') html.classList.add('dark');
-      updateToggleIcon();
-    })();
-
-    // Dummy Brand Kit download (replace with a real file link)
-    function downloadBrandKit() {
-      const url = 'assets/aistronor_brandkit.zip'; // <-- replace with real path
-      window.open(url, '_blank');
-    }
-  </script>
+  <!-- Archivo JavaScript -->
+  <script src="javascript/index_ham.js"></script>
 
 </body>
-  </html>
+
+</html>
